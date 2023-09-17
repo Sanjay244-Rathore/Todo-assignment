@@ -1,53 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo lists</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-        #navbar{
-            border: 1px solid rebeccapurple;
+        body {
+            overflow-x: hidden;
+        }
+
+        #main {
+            border: 2px solid transparent;
+        }
+
+        #navbar {
+            border: 1px solid transparent;
             background-color: rgb(37, 26, 49);
             padding: 15px;
             display: flex;
             justify-content: space-between;
         }
-        #admin{
+
+        #admin {
             font-size: 20px;
             color: white;
         }
-        #login{
+
+        #login {
             border-radius: 5px;
             padding: 5px 8px;
         }
-        #head{
-            border: 1px solid green;
-            width: 500px;
+
+        #space1 {
+            border: 1px solid transparent;
+            /* width: 200px;
+            height: 200px; */
         }
-        #btn-1{
+
+        #space2 {
+            border: 3px solid transparent;
+            /* width: 340px; */
+        }
+
+        #head {
+            background-color: rgb(13, 136, 97);
+            color: white;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            /* width: 500px; */
+        }
+
+        #btn-1 {
+            border-color: transparent;
+            background-color: rgb(55, 179, 55);
+            color: white;
+            /* font-weight: bold; */
             padding: 5px 10px;
         }
-        #btn-2{
+
+        #btn-2 {
+            border-color: transparent;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background-color: rgb(230, 57, 57);
+            color: white;
+            /* font-weight: bold; */
             padding: 5px 10px;
         }
-        #input-1{
-            width: 340px;
+
+        #h1 {
+            font-weight: bold;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #input-1 {
+            /* width: 524px; */
             padding: 5px 15px;
         }
-        #todo{
+
+        #todo {
+            border: 2px solid transparent;
+            padding: 0px 10px;
             margin-top: 20px;
         }
-        #list-1{
+        ul{
+            justify-content: space-between;
+        }
+        #list-1 {
             margin-top: 10px;
             justify-content: space-between;
             border: 1px solid rgb(215, 215, 215);
             border-radius: 5px;
             background-color: rgb(215, 215, 215);
             padding: 10px;
-            margin-left:-40px;
-            width: 480px;
+            margin-left: -30px;
+
         }
-        .btn-edit{
+
+        .btn-edit {
             width: 30px;
             height: 30px;
             border-radius: 5px;
@@ -55,10 +109,16 @@
             border-color: transparent;
             /* padding: 2px 7px; */
         }
-        .btn-edit:hover{
+
+        .btn-edit:hover {
             cursor: pointer;
         }
-        .btn-delete{
+
+        #contain {
+            border: 2px solid transparent;
+        }
+
+        .btn-delete {
             width: 30px;
             height: 30px;
             background-color: red;
@@ -66,57 +126,37 @@
             border-color: transparent;
             /* padding: 2px 7px; */
         }
-        .btn-delete:hover{
+
+        .btn-delete:hover {
             cursor: pointer;
         }
-        #message{
+
+        #message {
             display: none;
             font-size: 20px;
         }
-        .editImg{
+
+        .editImg {
             /* background-color: green; */
             size: 20px;
             width: 100%;
             height: auto;
         }
-        .dltImg{
+
+        .dltImg {
             /* background-color: red; */
             width: 100%;
             height: auto;
         }
     </style>
 </head>
+
 <body>
     <div id="main"></div>
-    <!-- <div class="container">
-        <div id="navbar">
-            <span id="admin">admin</span>
-            <button id="login">Login</button>
-        </div>
-        <div class="container">
-        <div id="head">
-            <h2>
-                Todos (5)
-            </h2>
-        </div>
-        <div id="todo">
-            <input type="text" name="" id="input-1" placeholder="enter todo here">
-            <button id="btn-1">Submit</button>
-        </div>
-        <div id="allists">
-            <ul type="none">
-                <li id="list-1">
-                    <span>walk the dog</span>
-                    <button id="btn-edit">Edit</button>
-                    <button id="btn-delete">Delete</button>
-                </li>   
-                
-            </ul>
-        </div>
-    </div>
-    </div> -->
-        <!-- <img src="./delete.png" alt="">
-        <img src="./edit.png" alt=""> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
 </body>
-<script src="./app.js"></script>
+
 </html>

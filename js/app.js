@@ -12,33 +12,56 @@ login.setAttribute("id","login");
 login.innerHTML = "Login";
 navbar.appendChild(login);
 
+var row = document.createElement("div");
+row.setAttribute("class","row");
+row.style.marginTop = "40px"
+main.appendChild(row);
+
+var space1 = document.createElement("div");
+space1.setAttribute("class","col-xxl-3 col-xl-3 col-lg-3 col-md-3");
+space1.setAttribute("id","space1");
+row.appendChild(space1);
+
 var container = document.createElement("div");
-main.appendChild(container);
+container.setAttribute("id","contain");
+container.setAttribute("class","col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12")
+row.appendChild(container);
+
+var space2 = document.createElement("div");
+space1.setAttribute("class","col-xxl-3 col-xl-3 col-lg-3 col-md-3");
+space2.setAttribute("id","space2");
+row.appendChild(space2)
+
 
 var head = document.createElement("div");
 head.setAttribute("id","head");
 container.appendChild(head);
-var h2 = document.createElement("h2");
-h2.innerHTML = "Todos (5)";
+var h2 = document.createElement("h1");
+h2.setAttribute("id","h1")
+h2.innerHTML = "Todo Lists";
 head.appendChild(h2);
 
 var todo = document.createElement("div");
 todo.setAttribute("id","todo");
+todo.setAttribute("class","row")
 container.appendChild(todo);
 var input_1 = document.createElement("input");
 input_1.setAttribute("id","input-1");
+input_1.setAttribute("class","col-8");
 input_1.setAttribute("type","text");
-input_1.setAttribute("placeholder","Enter any todo here");
+input_1.setAttribute("placeholder","Enter prompt here");    
 todo.appendChild(input_1);
 
 var btn_1 = document.createElement("button");
 btn_1.setAttribute("id","btn-1");
+btn_1.setAttribute("class","col-2");
 btn_1.setAttribute("onclick","addData()")
 btn_1.innerHTML = "Add";
 todo.appendChild(btn_1);
 
 var btn_2 = document.createElement("button");
 btn_2.setAttribute("id","btn-2");
+btn_2.setAttribute("class","col-2");
 btn_2.setAttribute("onclick","deleteall()")
 btn_2.innerHTML = "DeleteAll";
 todo.appendChild(btn_2);
@@ -70,9 +93,8 @@ function addData(){
         ul.appendChild(li);
 
         var edit = document.createElement("button");
-        // edit.innerHTML = "edit";
         var editimg = document.createElement("img");
-        editimg.setAttribute("src","./edit.png");
+        editimg.setAttribute("src","./images/edit.png");
         editimg.setAttribute("class","editImg");
         edit.appendChild(editimg);
         edit.setAttribute("class","btn-edit");
@@ -80,16 +102,14 @@ function addData(){
         li.appendChild(edit);
 
         edit.addEventListener("click",function(){
-            var update = prompt();
-            li.parentNode = update.value;  
-            // li.innerHTML = update.innerHTML;
-            // ul.appendChild(li);
+            var update = prompt();  
+            li.innerHTML = update;
         })
 
         var dlt = document.createElement("button");
         // dlt.innerHTML = "delete";
         var dltimg = document.createElement("img");
-        dltimg.setAttribute("src","./delete.png");
+        dltimg.setAttribute("src","./images/bin.png");
         dltimg.setAttribute("class","dltImg");
         dlt.appendChild(dltimg);
         dlt.setAttribute("class","btn-delete");
@@ -115,6 +135,5 @@ function addData(){
 function deleteall(){
     ul.innerHTML = "";   
    }
-//////////////////////////////////////
 
 
